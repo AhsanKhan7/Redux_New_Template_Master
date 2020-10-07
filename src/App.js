@@ -1,12 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import { Counter } from "./features/counter/Counter";
+import Name from "./features/nameInput/Name";
+import Login from "./features/user/Login";
+import Basket from "./features/basket/Basket";
+import "./App.css";
+
+//use redux-persist for local storage so then state will not vipe out on reload page
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Login />
+        <Basket />
+        <Name />
+
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
